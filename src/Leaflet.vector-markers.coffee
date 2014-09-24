@@ -57,7 +57,7 @@
       iconColorClass = ""
       iconColorStyle = ""
       options = @options
-      if options.icon.slice(0, options.prefix.length + 1) is options.prefix + "-"
+      if options.prefix is '' or options.icon.slice(0, options.prefix.length + 1) is options.prefix + "-"
         iconClass = options.icon
       else
         iconClass = options.prefix + "-" + options.icon
