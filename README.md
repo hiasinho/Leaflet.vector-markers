@@ -1,7 +1,7 @@
 Leaflet.vector-markers
 ======================
 
-Vector SVG markers for Leaflet, with an option for Font Awesome/Twitter Bootstrap icons.
+Vector SVG markers for Leaflet, with an option for Font Awesome/Twitter Bootstrap/Maki icons.
 
 Thanks to https://github.com/lvoogdt for https://github.com/lvoogdt/Leaflet.awesome-markers.
 
