@@ -5,10 +5,11 @@ Vector SVG markers for Leaflet, with an option for Font Awesome/Twitter Bootstra
 
 Thanks to https://github.com/lvoogdt for https://github.com/lvoogdt/Leaflet.awesome-markers.
 
-Version 0.0.1 of Leaflet.vector-markers is tested with:
+Version 0.0.2 of Leaflet.vector-markers is tested with:
 - Bootstrap 3
 - Font Awesome 4.2
 - Leaflet 0.7.3
+- Maki icon 0.4.2
 
 ## Example
 
@@ -23,6 +24,9 @@ For Font-Awesome
 
 For Twitter bootstrap:
 - http://getbootstrap.com
+
+For Maki icons:
+- https://www.mapbox.com/maki/
 
 ## Using the plugin
 - 1) First, follow the steps for including Font-Awesome or Twitter bootstrap into your application.
@@ -49,6 +53,20 @@ http://getbootstrap.com/getting-started/
   // Creates a red marker with the coffee icon
   var redMarker = L.VectorMarkers.icon({
     icon: 'coffee',
+    markerColor: 'red'
+  });
+      
+  L.marker([48.15491,11.54183], {icon: redMarker}).addTo(map);
+````
+
+Or for Maki icons
+
+````js
+  // Creates a red marker with the bus icon
+  var redMarker = L.VectorMarkers.icon({
+    icon: 'bus',
+    prefix: '',
+    extraClasses: 'maki-icon',
     markerColor: 'red'
   });
       
