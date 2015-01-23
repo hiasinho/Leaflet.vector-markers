@@ -2,6 +2,8 @@
 #  Leaflet.VectorMarkers, a plugin that adds colorful iconic svg markers for Leaflet, based on the Font Awesome icons
 #  (c) 2014, Mathias Schneider
 #
+#  Version: 0.0.3
+#
 #  http://leafletjs.com
 #  https://github.com/hiasinho
 #
@@ -10,10 +12,10 @@
 
 ((window, document, undefined_) ->
   "use strict"
-  
+
   #
   #     * Leaflet.VectorMarkers assumes that you have already included the Leaflet library.
-  #     
+  #
   L.VectorMarkers = {}
   L.VectorMarkers.version = "1.0.0"
   L.VectorMarkers.MAP_PIN = 'M16,1 C7.7146,1 1,7.65636364 1,15.8648485 C1,24.0760606 16,51 16,51 C16,51 31,24.0760606 31,15.8648485 C31,7.65636364 24.2815,1 16,1 L16,1 Z'
@@ -43,9 +45,9 @@
 
       pin_path = L.VectorMarkers.MAP_PIN
 
-      div.innerHTML = '<svg width="32px" height="52px" viewBox="0 0 32 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">' + 
-                        '<path d="' + pin_path + '" fill="' + options.markerColor + '"></path>' + 
-                        icon + 
+      div.innerHTML = '<svg width="32px" height="52px" viewBox="0 0 32 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">' +
+                        '<path d="' + pin_path + '" fill="' + options.markerColor + '"></path>' +
+                        icon +
                       '</svg>'
       @_setIconStyles div, "icon"
       @_setIconStyles div, "icon-" + options.markerColor
