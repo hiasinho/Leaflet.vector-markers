@@ -19,7 +19,6 @@
     "dist/Leaflet.vector-markers.css"
   ],
   "license": "MIT",
-  "private": true,
   "ignore": [
     "**/.*",
     "node_modules",
@@ -30,6 +29,6 @@
   "devDependencies": {
   },
   "dependencies": {
-    
+
   }
 }
