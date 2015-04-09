@@ -38,39 +38,39 @@
       options = L.Util.setOptions(this, options)
 
     createIcon: (oldIcon) ->
-      div = (if (oldIcon and oldIcon.tagName is "DIV") then oldIcon else document.createElement("div"))
+      div = if oldIcon and oldIcon.tagName == 'DIV' then oldIcon else document.createElement('div')
       options = @options
-
-      icon = @_createInner()  if options.icon
-
       pin_path = L.VectorMarkers.MAP_PIN
-
-      div.innerHTML = '<svg width="32px" height="52px" viewBox="0 0 32 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">' +
-                        '<path d="' + pin_path + '" fill="' + options.markerColor + '"></path>' +
-                        icon +
-                      '</svg>'
-      @_setIconStyles div, "icon"
-      @_setIconStyles div, "icon-" + options.markerColor
+      div.innerHTML = '<svg width="32px" height="52px" viewBox="0 0 32 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">' + '<path d="' + pin_path + '" fill="' + options.markerColor + '"></path></svg>'
+      if options.icon
+        div.appendChild @_createInner()
+      @_setIconStyles div, 'icon'
+      @_setIconStyles div, 'icon-' + options.markerColor
       div
 
     _createInner: ->
+      i = document.createElement('i')
       iconClass = undefined
-      iconSpinClass = ""
-      iconColorClass = ""
-      iconColorStyle = ""
+      iconSpinClass = ''
+      iconColorClass = ''
+      iconColorStyle = ''
       options = @options
-      if options.prefix is '' or options.icon.slice(0, options.prefix.length + 1) is options.prefix + "-"
-        iconClass = options.icon
+      i.classList.add options.prefix
+      if options.extraClasses
+        i.classList.add options.extraClasses
+      if options.icon.slice(0, options.prefix.length + 1) == options.prefix + '-'
+        i.classList.add options.icon
       else
-        iconClass = options.prefix + "-" + options.icon
-      iconSpinClass = options.spinClass  if options.spin and typeof options.spinClass is "string"
+        i.classList.add options.prefix + '-' + options.icon
+      if options.spin and typeof options.spinClass == 'string'
+        i.classList.add options.spinClass
       if options.iconColor
-        if options.iconColor is "white" or options.iconColor is "black"
-          iconColorClass = "icon-" + options.iconColor
+        if options.iconColor == 'white' or options.iconColor == 'black'
+          i.classList.add 'icon-' + options.iconColor
         else
-          iconColorStyle = "style='color: " + options.iconColor + "' "
-      "<i " + iconColorStyle + "class='" + options.extraClasses + " " + options.prefix + " " + iconClass + " " + iconSpinClass + " " + iconColorClass + "'></i>"
-
+          i.style.color = options.iconColor
+      i
+    
     _setIconStyles: (img, name) ->
       options = @options
       size = L.point(options[(if name is "shadow" then "shadowSize" else "iconSize")])
