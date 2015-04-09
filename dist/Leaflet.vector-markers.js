@@ -23,47 +23,44 @@
         return options = L.Util.setOptions(this, options);
       },
       createIcon: function(oldIcon) {
-            var div, icon, options, pin_path;
-            div = (oldIcon && oldIcon.tagName === "DIV" ? oldIcon : document.createElement("div"));
-            options = this.options;
-            
-            pin_path = L.VectorMarkers.MAP_PIN;
-            // div.innerHTML = '<svg width="32px" height="52px" viewBox="0 0 32 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">' + '<path d="' + pin_path + '" fill="' + options.markerColor + '"></path>' + icon + '</svg>';
-    		div.innerHTML = '<svg width="32px" height="52px" viewBox="0 0 32 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">' + '<path d="' + pin_path + '" fill="' + options.markerColor + '"></path></svg>';
+        var div, icon, options, pin_path;
+        div = (oldIcon && oldIcon.tagName === "DIV" ? oldIcon : document.createElement("div"));
+        options = this.options;
+        pin_path = L.VectorMarkers.MAP_PIN;
+        div.innerHTML = '<svg width="32px" height="52px" viewBox="0 0 32 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">' + '<path d="' + pin_path + '" fill="' + options.markerColor + '"></path></svg>';
     		if (options.icon) {
-              // icon = this._createInner();
     		  div.appendChild(this._createInner());
-            }
-            this._setIconStyles(div, "icon");
-            this._setIconStyles(div, "icon-" + options.markerColor);
-            return div;
-          },
-          _createInner: function() {
+        }
+        this._setIconStyles(div, "icon");
+        this._setIconStyles(div, "icon-" + options.markerColor);
+        return div;
+        },
+      _createInner: function() {
     		var iconClass, iconColorClass, iconColorStyle, iconSpinClass, options, i = document.createElement('i');
-            iconClass = void 0;
-            iconSpinClass = "";
-            iconColorClass = "";
-            iconColorStyle = "";
-            options = this.options;
+        iconClass = void 0;
+        iconSpinClass = "";
+        iconColorClass = "";
+        iconColorStyle = "";
+        options = this.options;
     		i.classList.add(options.prefix);
     		if (options.extraClasses){
     			i.classList.add(options.extraClasses);
     		}
-            if (options.icon.slice(0, options.prefix.length + 1) === options.prefix + "-") {
+        if (options.icon.slice(0, options.prefix.length + 1) === options.prefix + "-") {
     		  i.classList.add(options.icon);
-            } else {
+        } else {
     		  i.classList.add(options.prefix + "-" + options.icon);
-            }
-            if (options.spin && typeof options.spinClass === "string") {
+        }
+        if (options.spin && typeof options.spinClass === "string") {
     		  i.classList.add(options.spinClass);
-            }
-            if (options.iconColor) {
-              if (options.iconColor === "white" || options.iconColor === "black") {
-    			i.classList.add('icon-' + options.iconColor);
-              } else {
-    			i.style.color = options.iconColor;
-              }
-            }
+        }
+        if (options.iconColor) {
+          if (options.iconColor === "white" || options.iconColor === "black") {
+    		    i.classList.add('icon-' + options.iconColor);
+          } else {
+    			  i.style.color = options.iconColor;
+          }
+        }
     		return i;
       },
       _setIconStyles: function(img, name) {
