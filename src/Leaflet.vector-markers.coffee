@@ -2,7 +2,7 @@
 #  Leaflet.VectorMarkers, a plugin that adds colorful iconic svg markers for Leaflet, based on the Font Awesome icons
 #  (c) 2014, Mathias Schneider
 #
-#  Version: 0.0.3
+#  Version: 0.0.4
 #
 #  http://leafletjs.com
 #  https://github.com/hiasinho
