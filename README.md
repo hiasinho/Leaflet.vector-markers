@@ -5,10 +5,10 @@ Vector SVG markers for Leaflet, with an option for Font Awesome/Twitter Bootstra
 
 Thanks to https://github.com/lvoogdt for https://github.com/lvoogdt/Leaflet.awesome-markers.
 
-Version 0.0.2 of Leaflet.vector-markers is tested with:
+Version 0.0.5 of Leaflet.vector-markers is tested with:
 - Bootstrap 3
-- Font Awesome 4.2
-- Leaflet 0.7.3
+- Font Awesome 4.3
+- Leaflet 0.7.7
 - Maki icon 0.4.2
 
 ## Example
@@ -38,14 +38,14 @@ http://fortawesome.github.io/Font-Awesome/get-started/
 For Twitter bootstrap, steps are here:
 
 http://getbootstrap.com/getting-started/
-    
 
-- 2) Next, copy the dist/images directory, vector-markers.css, and vector-markers.js to your project and include them:
+
+- 2) Next, copy the leaflet-vector-markers.css, and leaflet-vector-markers.js from dist/ to your project and include them:
 ````xml
-<link rel="stylesheet" href="css/Leaflet.vector-markers.css">
+<link rel="stylesheet" href="css/leaflet-vector-markers.css">
 ````
 ````xml
-<script src="js/leaflet.vector-markers.js"></script>
+<script src="js/leaflet-vector-markers.js"></script>
 ````
 
 - 3) Now use the plugin to create a marker like this:
@@ -55,7 +55,7 @@ http://getbootstrap.com/getting-started/
     icon: 'coffee',
     markerColor: 'red'
   });
-      
+
   L.marker([48.15491,11.54183], {icon: redMarker}).addTo(map);
 ````
 
@@ -69,7 +69,7 @@ Or for Maki icons
     extraClasses: 'maki-icon',
     markerColor: 'red'
   });
-      
+
   L.marker([48.15491,11.54183], {icon: redMarker}).addTo(map);
 ````
 
@@ -81,7 +81,7 @@ Or for Maki icons
 | prefix          | Select de icon library | 'fa'          | 'fa' for font-awesome or 'glyphicon' for bootstrap 3 |
 | markerColor     | Color of the marker    | 'blue'        | Any HEX color you can find                           |
 | iconColor       | Color of the icon      | 'white'       | 'white', 'black' or css code (hex, rgba etc) |
-| spin            | Make the icon spin     | false         | true or false. Font-awesome required | 
+| spin            | Make the icon spin     | false         | true or false. Font-awesome required |
 | extraClasses    | Additional classes in the created <i> tag | '' | 'fa-rotate90 myclass' eller other custom configuration |
 
 
