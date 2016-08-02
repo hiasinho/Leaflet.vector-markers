@@ -5,7 +5,7 @@ Vector SVG markers for Leaflet, with an option for Font Awesome/Twitter Bootstra
 
 Thanks to https://github.com/lvoogdt for https://github.com/lvoogdt/Leaflet.awesome-markers.
 
-Version 0.0.5 of Leaflet.vector-markers is tested with:
+Version 0.0.6 of Leaflet.vector-markers is tested with:
 - Bootstrap 3
 - Font Awesome 4.3
 - Leaflet 0.7.7

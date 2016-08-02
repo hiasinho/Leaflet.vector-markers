@@ -4,7 +4,7 @@ const iconOptions = {
   iconSize: [ 30, 50 ],
   iconAnchor: [ 15, 50 ],
   popupAnchor: [ 2, -40 ],
-  shadowAnchor: [ 7, 45 ],
+  shadowAnchor: [ 39, 45 ],
   shadowSize: [ 54, 51 ],
   className: 'vector-marker',
   prefix: 'fa',
