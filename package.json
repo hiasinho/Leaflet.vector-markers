@@ -25,7 +25,9 @@
     "lintAndTest": "npm run lint && jest"
   },
   "dependencies": {
-    "leaflet": "^0.7.0"
+    "autoprefixer": "^6.3.7",
+    "leaflet": "^0.7.0",
+    "postcss-loader": "^0.9.1"
   },
   "peerDependencies": {
     "leaflet": "^0.7.0"
