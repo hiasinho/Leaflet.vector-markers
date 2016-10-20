@@ -57,10 +57,10 @@ export default class Icon extends Leaflet.Icon {
     if (options.extraClasses) {
       i.classList.add(options.extraClasses)
     }
-    if (options.icon.slice(0, options.prefix.length + 1) === options.prefix + '-') {
-      i.classList.add(options.icon)
-    } else {
+    if (options.prefix) {
       i.classList.add(options.prefix + '-' + options.icon)
+    } else {
+      i.classList.add(options.icon)
     }
     if (options.spin && typeof options.spinClass === 'string') {
       i.classList.add(options.spinClass)
