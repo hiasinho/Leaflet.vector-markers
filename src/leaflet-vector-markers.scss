@@ -14,6 +14,10 @@ Version: 0.0.6
   display: block;
   text-align: center;
 
+  svg {
+    position: static !important;
+  }
+
   path {
     stroke: black;
     stroke-opacity: 0.4;
