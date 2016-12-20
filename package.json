@@ -2,7 +2,7 @@
   "name": "Leaflet.vector-markers",
   "version": "0.0.6",
   "description": "Vector SVG markers for Leaflet, with an option for Font Awesome/Twitter Bootstrap icons.",
-  "main": "dist/leaflet-vector-markers.js",
+  "main": "src/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/hiasinho/Leaflet.vector-markers.git"
@@ -26,11 +26,7 @@
   },
   "dependencies": {
     "autoprefixer": "^6.3.7",
-    "leaflet": "^0.7.0",
     "postcss-loader": "^0.9.1"
-  },
-  "peerDependencies": {
-    "leaflet": "^0.7.0"
   },
   "devDependencies": {
     "babel-cli": "^6.9.0",
@@ -44,6 +40,7 @@
     "eslint": "^2.11.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "jest-cli": "^12.1.1",
+    "leaflet": "1.0.2",
     "node-sass": "^3.7.0",
     "onchange": "^2.4.0",
     "sass-loader": "^3.2.0",

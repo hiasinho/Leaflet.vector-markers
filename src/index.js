@@ -1,6 +1,7 @@
-import L from 'leaflet'
-import VectorMarkers from './VectorMarkers'
-export VectorMarkers from './VectorMarkers'
-export Icon from './Icon'
+var makeVectorMarkers = require('./VectorMarkers');
 
-L.VectorMarkers = VectorMarkers
+module.exports = function(Leaflet) {
+  var VectorMarkers = makeVectorMarkers(Leaflet);
+  Leaflet.VectorMarkers = VectorMarkers;
+  return VectorMarkers;
+}
