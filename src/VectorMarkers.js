@@ -1,11 +1,15 @@
-import Icon from './Icon'
+var makeIcon = require('./Icon');
 
-export default {
-  version: '1.0.0',
+module.exports = function(Leaflet) {
+  Icon = makeIcon(Leaflet);
+  return {
+    version: '1.0.0',
 
-  Icon: Icon,
+    Icon: Icon,
 
-  icon: function(options) {
-    return new Icon(options)
-  },
+    icon: function(options) {
+      return new Icon(options)
+    },
+  }
 }
+
