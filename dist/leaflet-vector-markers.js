@@ -52,7 +52,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -81,15 +81,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	_leaflet2.default.VectorMarkers = _VectorMarkers3.default;
 
-/***/ },
+/***/ }),
 /* 1 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	module.exports = __WEBPACK_EXTERNAL_MODULE_1__;
 
-/***/ },
+/***/ }),
 /* 2 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -113,9 +113,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 	};
 
-/***/ },
+/***/ }),
 /* 3 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -162,7 +162,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  function Icon(options) {
 	    _classCallCheck(this, Icon);
 
-	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Icon).call(this, options));
+	    var _this = _possibleConstructorReturn(this, (Icon.__proto__ || Object.getPrototypeOf(Icon)).call(this, options));
 
 	    _leaflet2.default.Util.setOptions(_this, iconOptions);
 	    _leaflet2.default.Util.setOptions(_this, options);
@@ -200,14 +200,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var i = document.createElement('i');
 	      var options = this.options;
 
-	      i.classList.add(options.prefix);
-	      if (options.extraClasses) {
+	      if (options.extraClasses && typeof options.extraClasses === 'string') {
 	        i.classList.add(options.extraClasses);
 	      }
-	      if (options.icon.slice(0, options.prefix.length + 1) === options.prefix + '-') {
-	        i.classList.add(options.icon);
-	      } else {
+	      if (options.prefix && typeof options.prefix === 'string') {
 	        i.classList.add(options.prefix + '-' + options.icon);
+	        i.classList.add(options.prefix);
+	      } else {
+	        i.classList.add(options.icon);
 	      }
 	      if (options.spin && typeof options.spinClass === 'string') {
 	        i.classList.add(options.spinClass);
@@ -256,7 +256,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.default = Icon;
 
-/***/ }
+/***/ })
 /******/ ])
 });
 ;
