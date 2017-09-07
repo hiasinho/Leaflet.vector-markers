@@ -30,7 +30,7 @@
     "postcss-loader": "^0.9.1"
   },
   "peerDependencies": {
-    "leaflet": "0.7.0 - 1.1.0"
+    "leaflet": "^0.7.0 || ^1.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.9.0",
