@@ -1,3 +1,8 @@
+Please read before using:
+=========================
+
+I don't have time to maintain this repository at the moment. If you're willing to take over or be a contributor, please open an issue.
+
 Leaflet.vector-markers
 ======================
 
