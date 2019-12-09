@@ -150,6 +150,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  extraDivClasses: '',
 	  icon: 'home',
 	  markerColor: 'blue',
+	  opacity: 1,
 	  iconColor: 'white',
 	  viewBox: '0 0 32 52'
 	};
@@ -162,7 +163,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  function Icon(options) {
 	    _classCallCheck(this, Icon);
 
-	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Icon).call(this, options));
+	    var _this = _possibleConstructorReturn(this, (Icon.__proto__ || Object.getPrototypeOf(Icon)).call(this, options));
 
 	    _leaflet2.default.Util.setOptions(_this, iconOptions);
 	    _leaflet2.default.Util.setOptions(_this, options);
@@ -176,7 +177,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var options = this.options;
 	      var pin_path = options.map_pin || mapPin;
 
-	      div.innerHTML = '<svg width="' + options.iconSize[0] + 'px" height="' + options.iconSize[1] + 'px" viewBox="' + options.viewBox + '" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="' + pin_path + '" fill="' + options.markerColor + '"></path></svg>';
+	      div.innerHTML = '<svg width="' + options.iconSize[0] + 'px" height="' + options.iconSize[1] + 'px" viewBox="' + options.viewBox + '" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="' + pin_path + '" fill="' + options.markerColor + '" opacity="' + options.opacity + '"></path></svg>';
 
 	      if (options.icon) {
 	        div.appendChild(this._createInner());
@@ -204,10 +205,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	      if (options.extraClasses) {
 	        i.classList.add(options.extraClasses);
 	      }
-	      if (options.icon.slice(0, options.prefix.length + 1) === options.prefix + '-') {
-	        i.classList.add(options.icon);
-	      } else {
+	      if (options.prefix) {
 	        i.classList.add(options.prefix + '-' + options.icon);
+	      } else {
+	        i.classList.add(options.icon);
 	      }
 	      if (options.spin && typeof options.spinClass === 'string') {
 	        i.classList.add(options.spinClass);

@@ -85,8 +85,9 @@ Or for Maki icons
 | icon            | Name of the icon       | 'home'        | See glyphicons or font-awesome                       |
 | prefix          | Select de icon library | 'fa'          | 'fa' for font-awesome or 'glyphicon' for bootstrap 3 |
 | markerColor     | Color of the marker    | 'blue'        | Any HEX color you can find                           |
-| iconColor       | Color of the icon      | 'white'       | 'white', 'black' or css code (hex, rgba etc) |
-| spin            | Make the icon spin     | false         | true or false. Font-awesome required |
+| iconColor       | Color of the icon      | 'white'       | 'white', 'black' or css code (hex, rgba etc)         |
+| opacity         | Opacity of the marker  | 1             | Float between 0.0 and 1.0                            |
+| spin            | Make the icon spin     | false         | true or false. Font-awesome required                 |
 | extraClasses    | Additional classes in the created <i> tag | '' | 'fa-rotate90 myclass' eller other custom configuration |
 
 
