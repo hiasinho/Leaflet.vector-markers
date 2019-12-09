@@ -24,15 +24,11 @@
     "lint": "eslint ./src",
     "lintAndTest": "npm run lint && jest"
   },
-  "dependencies": {
-    "autoprefixer": "^6.3.7",
-    "leaflet": "^0.7.0",
-    "postcss-loader": "^0.9.1"
-  },
   "peerDependencies": {
-    "leaflet": "^0.7.0"
+    "leaflet": "> 0.7.0"
   },
   "devDependencies": {
+    "autoprefixer": "^6.3.7",
     "babel-cli": "^6.9.0",
     "babel-core": "^6.9.1",
     "babel-eslint": "^6.0.4",
@@ -44,8 +40,10 @@
     "eslint": "^2.11.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "jest-cli": "^12.1.1",
+    "leaflet": "> 0.7.0",
     "node-sass": "^3.7.0",
     "onchange": "^2.4.0",
+    "postcss-loader": "^0.9.1",
     "sass-loader": "^3.2.0",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.1",
