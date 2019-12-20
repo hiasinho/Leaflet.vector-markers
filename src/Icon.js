@@ -53,12 +53,12 @@ export default class Icon extends Leaflet.Icon {
     const i = document.createElement('i')
     const options = this.options
 
-    i.classList.add(options.prefix)
-    if (options.extraClasses) {
+    if (options.extraClasses && typeof options.extraClasses === 'string') {
       i.classList.add(options.extraClasses)
     }
-    if (options.prefix) {
+    if (options.prefix && typeof options.prefix === 'string') {
       i.classList.add(options.prefix + '-' + options.icon)
+      i.classList.add(options.prefix)
     } else {
       i.classList.add(options.icon)
     }
