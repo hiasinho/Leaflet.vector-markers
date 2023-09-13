@@ -20,22 +20,32 @@ module.exports = {
     }
   ],
   module: {
-    loaders: [
-      {test: /\.js$/, exclude: /node_modules/, loader: 'babel'},
+    rules: [
+      {test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader'},
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract(
-          'style',
-          'css!postcss-loader!sass'
-        )
+				use: ExtractTextPlugin.extract({
+					fallback: 'style-loader',
+					use: [
+						'css-loader',
+						{
+							loader: 'postcss-loader',
+							options: {
+								plugins: () => [ autoprefixer({ browsers: ['last 3 version', '> 10%', 'IE 8'] }) ]
+							}
+						},
+						{
+							loader: 'sass-loader',
+							options: {
+								includePaths: [path.resolve(__dirname, "./src")]
+							}
+
+						}]
+				})
       }
     ]
   },
   plugins: [
-    new ExtractTextPlugin("leaflet-vector-markers.css")
+    new ExtractTextPlugin({filename: "leaflet-vector-markers.css"})
   ],
-  sassLoader: {
-    includePaths: [path.resolve(__dirname, "./src")]
-  },
-  postcss: [ autoprefixer({ browsers: ['last 3 version', '> 10%', 'IE 8'] }) ]
 };
