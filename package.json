@@ -8,7 +8,7 @@
     "url": "https://github.com/hiasinho/Leaflet.vector-markers.git"
   },
   "scripts": {
-    "clean:lib": "rm -Rf ./lib",
+    "clean:lib": "rimraf lib",
     "compile:lib": "babel src --out-dir lib",
     "build:lib": "npm run clean:lib && npm run compile:lib",
     "build:dist": "webpack src/index.js dist/leaflet-vector-markers.js && webpack -p src/index.js dist/leaflet-vector-markers.min.js && webpack src/leaflet-vector-markers.scss dist/leaflet-vector-markers.css",
@@ -44,6 +44,7 @@
     "node-sass": "^6.0.1",
     "onchange": "^2.4.0",
     "postcss-loader": "^0.9.1",
+    "rimraf": "^5.0.5",
     "sass-loader": "^5.0.1",
     "style-loader": "^0.13.1",
     "webpack": "^3.12.0",
