@@ -26,12 +26,10 @@ Version: 0.0.6
   height: 40%;
   position: absolute;
   right: 21px;
-  -webkit-transform-origin: 50% 50%;
-      -ms-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
-  -webkit-transform: skew(150deg) rotate(-40deg);
-      -ms-transform: skew(150deg) rotate(-40deg);
-          transform: skew(150deg) rotate(-40deg);
+  -ms-transform-origin: 50% 50%;
+      transform-origin: 50% 50%;
+  -ms-transform: skew(150deg) rotate(-40deg);
+      transform: skew(150deg) rotate(-40deg);
   width: 60%;
   z-index: -1; }
 
